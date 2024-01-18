@@ -20,3 +20,10 @@
   .expand:hover::after {
     width: 100%; /* Expanded width on hover */
   }
+
+  #root{
+    padding-top: 1rem;
+  }
+  body{
+    margin: 0;
+  }
