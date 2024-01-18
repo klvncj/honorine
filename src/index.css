@@ -15,7 +15,7 @@
     width: 0;
     height: 2px; /* Border thickness */
     background-color: rgb(131, 85, 85); /* Border color */
-    transition: width 0.5s; /* Transition duration */
+    transition: width 0.3s; /* Transition duration */
   }
   .expand:hover::after {
     width: 100%; /* Expanded width on hover */
