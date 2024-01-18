@@ -50,7 +50,8 @@ function Menu() {
       <CiHeart size={28} className="cursor-pointer" />
     </Tooltip>
       <DrawerMenu/>
-      <Input label="Search.." className="hidden lg:block" icon={<CiSearch size={20} className="cursor-pointer"/>} />
+      <CiSearch size={20} className="cursor-pointer hidden md:block"/>
+      {/* <Input className="hidden md:block" label="Search.." icon={<CiSearch size={20} className="cursor-pointer"/>} /> */}
       </div>
   );
 }
