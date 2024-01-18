@@ -1,0 +1,5 @@
+This is Jusy a random to do for things i have to do delete it before launch
+
+- Fix the Search bar in Nav
+- Add Sending feature in the drawer
+- 

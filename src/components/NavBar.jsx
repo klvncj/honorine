@@ -46,12 +46,11 @@ function Menu() {
       <CiUser size={28} className="cursor-pointer"/>
       </Tooltip>
       <DrawerCart/>
-      {/* <IoBagHandleOutline size={28} className="cursor-pointer" /> */}
       <Tooltip content="Wish list">
       <CiHeart size={28} className="cursor-pointer" />
     </Tooltip>
       <DrawerMenu/>
-      <CiSearch size={28} className="cursor-pointer hidden md:block"/>
+      <Input label="Search.." className="hidden lg:block" icon={<CiSearch size={20} className="cursor-pointer"/>} />
       </div>
   );
 }
