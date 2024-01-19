@@ -6,6 +6,8 @@
     position: relative;
     display: inline-block;
     cursor: pointer;
+    padding-left: 2px;
+    padding-right: 2px;
   }
   .expand::after {
     content: '';
@@ -14,7 +16,7 @@
     left: 0;
     width: 0;
     height: 2px; /* Border thickness */
-    background-color: rgb(131, 85, 85); /* Border color */
+    background-color: #562f1d;/* Border color */
     transition: width 0.3s; /* Transition duration */
   }
   .expand:hover::after {
@@ -22,8 +24,10 @@
   }
 
   #root{
+      padding: 0;
     padding-top: 1rem;
   }
-  body{
-    margin: 0;
-  }
+  /* body{
+    background-color: #f5ece6;
+  } */
+ 

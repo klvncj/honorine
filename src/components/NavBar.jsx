@@ -1,7 +1,6 @@
 import { CiUser,CiSearch,CiHeart } from "react-icons/ci";
 import { IoBagHandleOutline } from "react-icons/io5";
 import { RiMenu2Fill } from "react-icons/ri";
-import { Tooltip } from "@material-tailwind/react";
 import React from "react";
 import {
   Drawer,
@@ -15,9 +14,9 @@ import '../App.css'
 function About(){  
   return(
     <div className="hidden lg:block">
-      <ul className="flex justify-around gap-8 my-5">
+      <ul className="flex justify-around gap-8 my-4 text-black">
         <li className="expand">Home</li>
-        <li className="expand">Sale</li>
+        <li className="expand">Sales</li>
         <li className="expand">New</li>
         <li className="expand">New collection</li>
         <li className="expand">Contact us</li>
@@ -30,27 +29,26 @@ function About(){
 function Logo(){
   const textStyle = {
     fontFamily: '"Mrs Saint Delafield", cursive',
-    fontWeight: 550,
+    fontWeight: 580,
     fontStyle: 'normal',
-    fontSize: '2.8rem',
+    fontSize: '2.6rem',
   }; 
   return(
-    <div style={textStyle}>Honorine</div>
+    <div style={textStyle} className="text-black">Honorine</div>
   )
 }
 
 function Menu() {
   return (
-<div className="flex gap-3 items-center">
-<Tooltip content="Wish list">
-      <CiUser size={28} className="cursor-pointer"/>
-      </Tooltip>
+<div className="flex gap-3 items-center mb-3">
+      <CiUser size={28} className="cursor-pointer" color="black"/>
+     
       <DrawerCart/>
-      <Tooltip content="Wish list">
-      <CiHeart size={28} className="cursor-pointer" />
-    </Tooltip>
+      
+      <CiHeart size={28} className="cursor-pointer" color="black"/>
+    
       <DrawerMenu/>
-      <CiSearch size={20} className="cursor-pointer hidden md:block"/>
+      <CiSearch size={28} className="cursor-pointer hidden md:block" color="black"/>
       {/* <Input className="hidden md:block" label="Search.." icon={<CiSearch size={20} className="cursor-pointer"/>} /> */}
       </div>
   );
@@ -64,7 +62,7 @@ function DrawerMenu() {
  
   return (
     <React.Fragment>
-      <RiMenu2Fill onClick={openDrawer} size={28} className="cursor-pointer block lg:hidden"/>
+      <RiMenu2Fill onClick={openDrawer} size={28} className="cursor-pointer block lg:hidden" color="black"/>
       <Drawer placement="right" open={open} onClose={closeDrawer} className="p-4">
         <div className="mb-6 flex items-center justify-between">
           <Typography variant="h5" color="blue-gray">
@@ -120,7 +118,7 @@ function DrawerCart() {
  
   return (
     <React.Fragment>
-      <IoBagHandleOutline onClick={openDrawer} size={28} className="cursor-pointer" />
+      <IoBagHandleOutline onClick={openDrawer} size={28} color="black" className="cursor-pointer" />
       <Drawer placement="right" open={open} onClose={closeDrawer} className="p-4">
         <div className="mb-6 flex items-center justify-between">
           <Typography variant="h5" color="blue-gray">
@@ -161,7 +159,7 @@ function DrawerCart() {
 function NavBar() {
  
   return(
-    <nav className="flex justify-between mx-2 my-0 px-0">
+    <nav className="flex mx-2 my-0 px-6 justify-between md:justify-around bg-transparent">
       <Logo/>
       <About/>
       <Menu/>
