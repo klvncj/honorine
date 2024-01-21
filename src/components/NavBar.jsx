@@ -16,9 +16,9 @@ function About(){
     <div className="hidden lg:block">
       <ul className="flex justify-around gap-8 my-4 text-black">
         <li className="expand">Home</li>
-        <li className="expand">Sales</li>
+        <li className="expand">Collections</li>
         <li className="expand">New</li>
-        <li className="expand">New collection</li>
+        <li className="expand">Sales</li>
         <li className="expand">Contact us</li>
         <li className="expand">About us</li>
       </ul>
