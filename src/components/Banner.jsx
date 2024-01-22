@@ -21,7 +21,7 @@ function Item(){
     fontSize: '2.4rem',
   }; 
     return(
-      <div className="bg-[#f5ece6] relative   flex items-center  justify-center overflow-hidden z-50 ">
+      <div className="bg-[#f5ece6] relative flex items-center  justify-center overflow-hidden z-50 h-[70vh]">
      
     <div className="relative mx-auto h-full px-4  pb-20   md:pb-10 sm:max-w-xl md:max-w-full md:px-24 lg:max-w-screen-xl lg:px-8">
         <div className="flex flex-col items-center justify-between lg:flex-row py-16">
