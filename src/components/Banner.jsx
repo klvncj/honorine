@@ -42,7 +42,7 @@ function Item(){
                     <div className="mt-10 flex flex-col items-center md:flex-row">
                         <a href="/" className="mb-3 inline-flex h-12 w-full items-center justify-center bg-[#8c695c] px-6 font-medium tracking-wide text-white shadow-md transition hover:bg-[#75584d] focus:outline-none md:mr-4 md:mb-0 md:w-auto  hover:-translate-y-1  hover:-translate-x-1 duration-500">
                             View More</a>
-                        <a href="/" aria-label="" className="group inline-flex items-center font-semibold text-g1">Shop Now
+                        <a href="/collection" aria-label="" className="group inline-flex items-center font-semibold text-g1">Shop Now
                             <svg xmlns="http://www.w3.org/2000/svg" className="ml-2 h-6 w-6 transition-transform group-hover:translate-x-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
                                 <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
                             </svg>
