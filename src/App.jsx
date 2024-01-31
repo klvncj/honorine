@@ -1,6 +1,6 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom"
 import Home from "./pages/Home"
-import Collections from "./pages/collections"
+import Collections from "./pages/Collections"
 
 function App() {
 
