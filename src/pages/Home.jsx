@@ -7,6 +7,7 @@ import Main2 from '../components/Main2';
 import NavBar from '../components/NavBar'
 import { Input, Button } from "@material-tailwind/react";
 import Footer from '../components/Footer';
+import HeroBanner from '../components/HeroBanner';
 
 function Home() {
   const [email, setEmail] = React.useState("");
@@ -24,18 +25,19 @@ function Home() {
 <NavBar/>
 
 {/* Banner  */}
-<Banner/>
+{/* <Banner/> */}
+<HeroBanner/>
 
 {/* Second Product Card display */}
-<Main2/>
+{/* <Main2/> */}
 
 {/* First Product Card display */}
-<Main1/>
+{/* <Main1/> */}
 
 
 
 {/* News Later */}
-<section className='flex justify-center gap-8 lg:gap-60 flex-wrap'>
+{/* <section className='flex justify-center gap-8 lg:gap-60 flex-wrap'>
   <div className='flex justify-center items-center'>
   <h2 className='expand flex text-4xl font-bold' style={textStyle}>Join Our Newsletter</h2>  
   </div>
@@ -59,10 +61,10 @@ function Home() {
         Invite
       </Button>
     </div>
-</section>
+</section> */}
 
 {/* Footer */}
-<Footer/>
+{/* <Footer/> */}
 {/* <DefaultSpeedDial/> */}
     </>
   )
