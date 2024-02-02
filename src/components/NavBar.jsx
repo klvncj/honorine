@@ -13,6 +13,12 @@ import {
 } from "@material-tailwind/react";
 import '../App.css'
 import { Link } from "react-router-dom";
+import { IoHomeOutline } from "react-icons/io5";
+import { BsCollection } from "react-icons/bs";
+import { IoPricetagsOutline } from "react-icons/io5";
+import { GrContact } from "react-icons/gr";
+import { TfiInfoAlt } from "react-icons/tfi";
+import { FaLink } from "react-icons/fa6";
 function About(){  
   return(
     <div className="hidden lg:block">
@@ -89,17 +95,20 @@ function DrawerMenu() {
         </div>
         <div>
           <ul>
-            <li className="flex uppercase font-semibold font-sans p-3 pl-4 justify-end my-3 border-b-2 border-black bg-[#c8aa90]"><Link to='/'>Home</Link></li>
-            <li className="flex uppercase font-semibold font-sans p-3 py-5 pl-4 justify-end my-3 bg-[#c8aa90bd]"><Link to='/collection'>Collection</Link></li>
-            <li className="flex uppercase font-semibold font-sans p-3 py-4 pl-4 justify-end my-3 bg-[#c8aa90bd]"><Link to='/sales'>Sales</Link></li>
-            <li className="flex uppercase font-semibold font-sans p-3 py-4 pl-4 justify-end my-3 bg-[#c8aa90bd]"><Link to='/contact'>Contact us</Link></li>
-            <li className="flex uppercase font-semibold font-sans p-3 py-4 pl-4 justify-end my-3 bg-[#c8aa90bd]"><Link to='/about'>About us</Link></li>
+            <li className="flex uppercase font-semibold font-sans p-3 pr-4 justify-between items-center my-2 border-b-[1px] border-black "><IoHomeOutline size={23}/><Link to='/'>Home</Link></li>
+            <li className="flex uppercase font-semibold font-sans p-3 py-5 pr-4 justify-between items-center  my-2  border-b-[1px] border-black"><BsCollection size={22}/><Link to='/collection'>Collection</Link></li>
+            <li className="flex justify-between items-center uppercase font-semibold font-sans p-3 py-4 pr-4  my-2 border-b-[1px] border-black"><IoPricetagsOutline size={20}/><Link to='/sales'>Sales</Link></li>
+            <li className="flex uppercase font-semibold font-sans p-3 py-4 pr-4 justify-between items-center my-2 border-b-[1px] border-black"><GrContact size={20}/><Link to='/contact'>Contact us</Link></li>
+            <li className="flex uppercase font-semibold font-sans p-3 py-4 pr-4 justify-between items-center my-2 border-b-[1px]  border-black"><TfiInfoAlt size={20}/><Link to='/about'>About us</Link></li>
           </ul>
 <hr className="my-12"/>
-          <span className="flex uppercase font-semibold font-sans p-3 pl-4 gap-5 justify-center  bg-[#f4f1f1]">
-            <a href="/#" className="bg-purple-400 p-2 rounded-[50%]"><GrInstagram  color="white"/></a>
-            <a href="/#" className="bg-teal-400 p-2 rounded-[50%]"><BsWhatsapp  color="white"/></a>
-            <a href="/#" className="bg-yellow-400 p-2 rounded-[50%]"><RiSnapchatFill  color="white"/></a>
+          <span className="flex flex-col">
+         <div className="flex justify-center items-center my-2 gap-4 font-bold leading-3 tracking-wider"> <FaLink size={20}/>Socials</div>
+            <div className="flex uppercase font-semibold font-sans p-3 pl-4 gap-5 justify-center border-black border-[1px]">
+            <a href="https://www.instagram.com/wear_honorine/" className="bg-black p-2 rounded-[50%]"><GrInstagram  color="white"/></a>
+            <a href="/#" className="bg-black p-2 rounded-[50%]"><BsWhatsapp  color="white"/></a>
+            <a href="/#" className="bg-black p-2 rounded-[50%]"><RiSnapchatFill  color="white"/></a>
+            </div>
             </span>
 
         </div>
@@ -159,7 +168,7 @@ function NavBar() {
   return(
    <>
    {/* Desktop Version Starts  */}
-    <nav className="hidden md:flex mx-2 my-0 px-6 bg-[#fdfdfd00] justify-between items-center md:justify-around  sticky top-0">
+    <nav className="hidden md:flex mx-2 my-0 px-6 bg-[#fdfdfd00] justify-between items-center md:justify-around sticky top-0">
       <Logo/>
       <About/>
       <Menu/>
