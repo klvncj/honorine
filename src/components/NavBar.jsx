@@ -1,15 +1,15 @@
 import { CiUser,CiSearch,CiHeart } from "react-icons/ci";
 import { CiShoppingCart } from "react-icons/ci";
 import { RiMenu2Fill } from "react-icons/ri";
-import React from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { GrInstagram } from "react-icons/gr";
 import { BsWhatsapp } from "react-icons/bs";
 import { RiSnapchatFill } from "react-icons/ri";
 import {
   Drawer,
-  Button,
   Typography,
   IconButton,
+  Badge,
 } from "@material-tailwind/react";
 import '../App.css'
 import { Link } from "react-router-dom";
@@ -19,10 +19,15 @@ import { IoPricetagsOutline } from "react-icons/io5";
 import { GrContact } from "react-icons/gr";
 import { TfiInfoAlt } from "react-icons/tfi";
 import { FaLink } from "react-icons/fa6";
+// import Sidebar from "./Sidebar";
+import { SidebarContext } from "../context/SidebarContext";
+import { CartContext } from "../context/CartContext";
+
+
 function About(){  
   return(
     <div className="hidden lg:block">
-      <ul className="flex justify-around gap-8 mb-2 text-black">
+      <ul className="flex justify-around items-center gap-8 mb-2 text-black">
         <li className="expand"><Link to='/'>Home</Link></li>
         <li className="expand"><Link to='/collection'>Collections</Link></li>
         <li className="expand"><Link to='/sales'>Sales</Link></li>
@@ -46,21 +51,6 @@ function Logo(){
   )
 }
 
-function Menu() {
-  return (
-<div className="flex gap-3 items-center mb-3">
-      <CiSearch size={25} className="cursor-pointer hidden md:block" color="black"/>
-      <CiUser size={25} className="cursor-pointer" color="black"/>
-     
-      <DrawerCart/>
-      
-      <CiHeart size={28} className="cursor-pointer" color="black"/>
-    
-      <DrawerMenu/>
-      {/* <Input className="hidden md:block" label="Search.." icon={<CiSearch size={20} className="cursor-pointer"/>} /> */}
-      </div>
-  );
-}
 
 function DrawerMenu() {
   const [open, setOpen] = React.useState(false);
@@ -116,72 +106,49 @@ function DrawerMenu() {
     </React.Fragment>
   );
 }
-
-function DrawerCart() {
-  const [open, setOpen] = React.useState(false);
  
-  const openDrawer = () => setOpen(true);
-  const closeDrawer = () => setOpen(false);
- 
-  return (
-    <React.Fragment>
-      <CiShoppingCart onClick={openDrawer} size={28} color="black" className="cursor-pointer" />
-      <Drawer placement="right" open={open} onClose={closeDrawer} className="p-4">
-        <div className="mb-6 flex items-center justify-between">
-          <Typography variant="h5" color="blue-gray">
-           Product Cart
-          </Typography>
-          <IconButton variant="text" color="blue-gray" onClick={closeDrawer}>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth={2}
-              stroke="currentColor"
-              className="h-5 w-5"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M6 18L18 6M6 6l12 12"
-              />
-            </svg>
-          </IconButton>
-        </div>
-        <Typography color="gray" className="mb-8 pr-4 font-normal">
-          Material Tailwind features multiple React and HTML components, all
-          written with Tailwind CSS classes and Material Design guidelines.
-        </Typography>
-        <div className="flex gap-2">
-          <Button size="sm" variant="outlined">
-            Documentation
-          </Button>
-          <Button size="sm">Get Started</Button>
-        </div>
-      </Drawer>
-    </React.Fragment>
-  );
-}
 
 function NavBar() {
- 
+
+  const [isActive , setIsActive] = useState(false)
+  const {IsOpen ,setIsOpen} = useContext(SidebarContext)
+  const {itemAmount} = useContext(CartContext)
+  useEffect(()=>{
+    window.addEventListener('scroll',()=>{
+      window.scrollY > 60 ? setIsActive(true) : setIsActive(false)
+    })
+  })
   return(
    <>
    {/* Desktop Version Starts  */}
-    <nav className="hidden md:flex mx-2 my-0 px-6 bg-[#fdfdfd00] justify-between items-center md:justify-around sticky top-0">
+    <nav className={`hidden md:flex mx-2 my-0 px-6 ${isActive ? ' transition bg-[#fdfdfd] duration-500' : 'transition bg-[#fdfdfd00] duration-500'} justify-between items-center md:justify-around sticky top-0 z-10`}>
       <Logo/>
       <About/>
-      <Menu/>
+      <div className="flex gap-3 items-center mb-3 mt-2">
+      <CiSearch size={25} className="cursor-pointer hidden md:block" color="black"/>
+      <CiUser size={25} className="cursor-pointer" color="black"/>
+     
+      <Badge content={itemAmount}>
+      <CiShoppingCart onClick={()=>{setIsOpen(!IsOpen)}} size={28} color="black" className="cursor-pointer" />
+      </Badge>
+      
+      <CiHeart size={28} className="cursor-pointer" color="black"/>
+    
+      <DrawerMenu/>
+      
+      </div>
     </nav>
     {/* Desktop Version Ends  */}
     {/* Mobile Version of the Nav Bar Starts */}
-    <nav className="sm: flex my-0 px-6 bg-[#fcfcfc00] justify-between items-center md:justify-around md:hidden">
+    <nav className={`sm: flex my-0 px-6 ${isActive ? ' transition bg-[#fdfdfd] duration-500' : 'transition bg-[#fdfdfd00] duration-500'} justify-between items-center md:justify-around sticky top-0 md:hidden z-10`}>
       <DrawerMenu/>
       <Logo/>
       <div className="flex gap-3 items-center mb-3">
       <CiSearch size={25} className="cursor-pointer hidden md:block" color="black"/>
       <CiUser size={25} className="cursor-pointer" color="black"/>
-      <DrawerCart/>
+  <Badge content={itemAmount}>
+  <CiShoppingCart onClick={()=>{setIsOpen(!IsOpen)}} size={28} color="black" className="cursor-pointer" />
+  </Badge>
       <CiHeart size={28} className="cursor-pointer" color="black"/>
       {/* <DrawerMenu/> */}
       </div>
