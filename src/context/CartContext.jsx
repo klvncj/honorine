@@ -1,5 +1,7 @@
 import React from 'react'
 import { createContext , useState , useEffect } from 'react'
+import {  toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 //create context 
 
@@ -36,7 +38,7 @@ function CartProvider({children}) {
         const cartItem = cart.find((item) => {
             return item.id === id
         })
-        // console.log(cartItem);
+        toast.success(`${product.title} has been added to cart`)
 
         if(cartItem){
             const newCart = [...cart].map((item) => {

@@ -9,7 +9,7 @@ function HeroBanner() {
 <div className="w-[100%] lg:ml-52 lg:mb-64 lg:mr-56 m-0 mb-96">
 <div className="lg:block mt-24 hidden">
       <h2 className="text-5xl font-light tracking-wide text-g1" >
-            <span className="font-bold tracking-wide" style={{fontFamily : '"Montserrat",sans-serif'}}><div className=" w-28 h-[2px] bg-black"></div>EXCLUSIVE COLLECTION</span> <br/> We Make you look
+            <span className="font-bold tracking-wide" style={{fontFamily : '"Montserrat",sans-serif'}}><div className=" w-28 h-[2px] bg-black"></div>EXCLUSIVE COLLECTIONS</span> <br/> We Make you look
          <span className="inline-block border-b-4 border-[#fc4664] px-2 font-bold text-g4 animate__animated animate__flash">different</span>
          <br/> Elevate your style <br/>
       </h2>

@@ -4,7 +4,6 @@ import {IoMdAdd, IoMdClose, IoMdRemove} from 'react-icons/io'
 import {CartContext} from '../context/CartContext'
 import { useContext } from 'react'
 
-
 function CartItem({item}) {
    const {removeFromCart , increaseAmount , decreseAmount} = useContext(CartContext)
   const {id,title,image,price,amount} = item

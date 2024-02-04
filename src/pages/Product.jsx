@@ -1,8 +1,14 @@
-import React from 'react'
+// import React from 'react'
+import NavBar from '../components/NavBar'
+import Footer from '../components/Footer'
 
 function Product() {
   return (
-    <div>Product</div>
+    <>
+    <NavBar/>
+    <main></main>
+    <Footer/>
+    </>
   )
 }
 

@@ -17,7 +17,7 @@ function Sidebar() {
  const {cart,clearCart,total } = useContext(CartContext)
 
   return (
-    <div className={`${isOpen ? 'right-0' : '-right-full'} w-full bg-[#fdfdfd] fixed top-o h-full shadow-2xl md:w-[35vw] xl:max-w-[30vw] transition-all duration-300  z-20 px-4 lg:px-[35px]`}>
+    <div className={`${isOpen ? 'right-0' : '-right-full'} w-full bg-[#fdfdfd] fixed top-0 h-full shadow-2xl md:w-[35vw] xl:max-w-[30vw] transition-all duration-300  z-20 px-4 lg:px-[35px]`}>
 <div className="flex items-center justify-between py-6 border-b">
     <div className="uppercase text-sm font-semibold">Shopping Cart ({cart.length})</div>
     {/* icon  */}
@@ -37,6 +37,8 @@ function Sidebar() {
 {/* clear  */}
 <div onClick={clearCart} className="cursor-pointer py-4 bg-red-500 text-white w-12 h-12 flex justify-center items-center text-xl rounded"><FiTrash2/></div>
     </div>
+    <Link to='/' className="bg-gray-200 flex p-4 justify-center items-center text-black w-full font medium">View Cart</Link>
+    <Link className="bg-black flex p-4 justify-center items-center text-white w-full font medium">Checkout</Link>
    </div>
     </div>
   )

@@ -126,7 +126,8 @@ function NavBar() {
       <About/>
       <div className="flex gap-3 items-center mb-3 mt-2">
       <CiSearch size={25} className="cursor-pointer hidden md:block" color="black"/>
-      <CiUser size={25} className="cursor-pointer" color="black"/>
+      <Link to={'/admin'}>
+      <CiUser size={25} className="cursor-pointer" color="black"/></Link>
      
       <Badge content={itemAmount}>
       <CiShoppingCart onClick={()=>{setIsOpen(!IsOpen)}} size={28} color="black" className="cursor-pointer" />
