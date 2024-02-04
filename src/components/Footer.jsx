@@ -20,58 +20,6 @@ function Logo(){
 }
  
 const currentYear = new Date().getFullYear();
-{/* <footer className="w-full bg-white pb-0">
-      <div className="flex flex-row flex-wrap items-center justify-center gap-y-2 gap-x-12 bg-white text-center md:justify-between px-8">
-        <Logo/>
-        <ul className="flex flex-wrap items-center gap-y-2 gap-x-8">
-          <li>
-            <Link
-              as="a"
-              href="#"
-              color="blue-gray"
-              className="font-normal transition-colors hover:text-blue-500 focus:text-blue-500"
-            >
-              About Us
-            </Link>
-          </li>
-          <li>
-            <Typography
-              as="a"
-              href="#"
-              color="blue-gray"
-              className="font-normal transition-colors hover:text-blue-500 focus:text-blue-500"
-            >
-              License
-            </Typography>
-          </li>
-          <li>
-            <Typography
-              as="a"
-              href="#"
-              color="blue-gray"
-              className="font-normal transition-colors hover:text-blue-500 focus:text-blue-500"
-            >
-              Contribute
-            </Typography>
-          </li>
-          <li>
-            <Typography
-              as="a"
-              href="#"
-              color="blue-gray"
-              className="font-normal transition-colors hover:text-blue-500 focus:text-blue-500"
-            >
-              Contact Us
-            </Typography>
-          </li>
-        </ul>
-      </div>
-      <div className="bg-black p-4">
-<div className="">
-<p className="text-white text-center">Copyright &copy;Wear Honorine Store {currentYear}.<br className="block md:hidden"/> All rights reserved <br/>Designed by <a href="https://www.instagram.com/klvncj/" className="text-white underline underline-offset-1 cursor-pointer">klvncj</a></p>
-</div>
-      </div>
-    </footer> */}
  
 function Footer() {
   return (
@@ -81,7 +29,7 @@ function Footer() {
             <div className="w-full -mx-6 lg:w-2/5">
                 <div className="px-6">
                     <a href="#">
-                        <img className="w-auto h-7" src="https://merakiui.com/images/full-logo.svg" alt=""/>
+                       <Logo/>
                     </a>
 
                     <p className="max-w-sm mt-2 text-black dark:text-gray-400">Making the world a better place through creating elegant designs</p>

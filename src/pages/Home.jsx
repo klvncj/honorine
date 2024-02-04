@@ -28,7 +28,9 @@ function Home() {
     e.preventDefault()
     try{
       console.log('send')
-      toast.success(`Email has been addded`);
+      toast.success(`Email has been addded`, {
+        toastId: email
+      });
     }catch(error){
       toast.error("An error has occured!");
     }
@@ -41,7 +43,7 @@ function Home() {
 {/* Banner  */}
 <HeroBanner/>
 
-<section className='py-16'>
+<section className='py-16' id='featured'>
   <div className='mx-auto'>
 <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 px-3 gap-7'>
 {filteredProduct.map(products => {

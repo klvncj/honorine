@@ -13,7 +13,7 @@ function HeroBanner() {
          <span className="inline-block border-b-4 border-[#fc4664] px-2 font-bold text-g4 animate__animated animate__flash">different</span>
          <br/> Elevate your style <br/>
       </h2>
-     <div className='flex items-center gap-4 ml-6'> <a className="btn mt-4" href="/#">View More</a>   <a href="/collection" className="group mt-4 flex items-center font-semibold text-g1">Shop Now <svg xmlns="http://www.w3.org/2000/svg" className="ml-2 h-6 w-6 transition-transform group-hover:translate-x-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2"><path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"></path> </svg> </a></div>
+     <div className='flex items-center gap-4 ml-6'> <a className="btn mt-4" href="/#featured">View More</a>   <a href="/collection" className="group mt-4 flex items-center font-semibold text-g1">Shop Now <svg xmlns="http://www.w3.org/2000/svg" className="ml-2 h-6 w-6 transition-transform group-hover:translate-x-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2"><path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"></path> </svg> </a></div>
     </div>
 
     {/* Mobile Starts here  */}

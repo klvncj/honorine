@@ -38,7 +38,9 @@ function CartProvider({children}) {
         const cartItem = cart.find((item) => {
             return item.id === id
         })
-        toast.success(`${product.title} has been added to cart`)
+        toast.success(`${product.title} has been added to cart`, {
+            toastId: product.id
+          })
 
         if(cartItem){
             const newCart = [...cart].map((item) => {
