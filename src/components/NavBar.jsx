@@ -31,7 +31,7 @@ function About(){
         <li className="expand"><Link to='/'>Home</Link></li>
         <li className="expand"><Link to='/collection'>Collections</Link></li>
         <li className="expand"><Link to='/sales'>Sales</Link></li>
-        <li className="expand"><Link to='/contact'>Contact us</Link></li>
+        {/* <li className="expand"><Link to='/contact'>Contact us</Link></li> */}
         <li className="expand"><Link to='/about'>About us</Link></li>
       </ul>
     </div>
@@ -88,7 +88,7 @@ function DrawerMenu() {
             <li className="flex uppercase font-semibold font-sans p-3 pr-4 justify-between items-center my-2 border-b-[1px] border-black "><IoHomeOutline size={23}/><Link to='/'>Home</Link></li>
             <li className="flex uppercase font-semibold font-sans p-3 py-5 pr-4 justify-between items-center  my-2  border-b-[1px] border-black"><BsCollection size={22}/><Link to='/collection'>Collection</Link></li>
             <li className="flex justify-between items-center uppercase font-semibold font-sans p-3 py-4 pr-4  my-2 border-b-[1px] border-black"><IoPricetagsOutline size={20}/><Link to='/sales'>Sales</Link></li>
-            <li className="flex uppercase font-semibold font-sans p-3 py-4 pr-4 justify-between items-center my-2 border-b-[1px] border-black"><GrContact size={20}/><Link to='/contact'>Contact us</Link></li>
+            {/* <li className="flex uppercase font-semibold font-sans p-3 py-4 pr-4 justify-between items-center my-2 border-b-[1px] border-black"><GrContact size={20}/><Link to='/contact'>Contact us</Link></li> */}
             <li className="flex uppercase font-semibold font-sans p-3 py-4 pr-4 justify-between items-center my-2 border-b-[1px]  border-black"><TfiInfoAlt size={20}/><Link to='/about'>About us</Link></li>
           </ul>
 <hr className="my-12"/>

@@ -1,9 +1,9 @@
-import { Typography } from "@material-tailwind/react";
+// import { Typography } from "@material-tailwind/react";
 import { BsWhatsapp } from "react-icons/bs";
-import { FaLink } from "react-icons/fa6";
+// import { FaLink } from "react-icons/fa6";
 import { GrInstagram } from "react-icons/gr";
 import { RiSnapchatFill } from "react-icons/ri";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 
 function Logo(){
@@ -35,8 +35,8 @@ function Footer() {
                     <p className="max-w-sm mt-2 text-black dark:text-gray-400">Making the world a better place through creating elegant designs</p>
                     <div className="flex -mx-2">
                     <div className="flex uppercase font-semibold font-sans p-2 gap-5 justify-center">
-            <a href="https://www.instagram.com/wear_honorine/" className="bg-black p-2 rounded-[50%]"><GrInstagram  color="white"/></a>
-            <a href="/#" className="bg-black p-2 rounded-[50%]"><BsWhatsapp  color="white"/></a>
+            <a href="https://www.instagram.com/wear_honorine/" target="_blank" rel="noreferrer" className="bg-black p-2 rounded-[50%]"><GrInstagram  color="white"/></a>
+            <a href="wa.me/message/5NTUT4D4JCSWM1" target="_blank" rel="noreferrer" className="bg-black p-2 rounded-[50%]"><BsWhatsapp  color="white"/></a>
             <a href="/#" className="bg-black p-2 rounded-[50%]"><RiSnapchatFill  color="white"/></a>
             </div>
                     </div>

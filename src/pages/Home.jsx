@@ -1,14 +1,11 @@
 import React  from 'react';
 import '../App.css'
-
 // import Footer from './components/Footer'
 import NavBar from '../components/NavBar'
 import HeroBanner from '../components/HeroBanner';
 import { useContext } from 'react';
 import { ProductContext } from '../context/ProductContext'
-
 import ProductCard from '../components/ProductCard'
-
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Footer from '../components/Footer';
@@ -17,7 +14,7 @@ import { Link } from 'react-router-dom';
 function Home() {
 
   const { products } = useContext(ProductContext)
-  console.log(products);
+  // console.log(products);
   const filteredProduct = products.filter(item => {
     return (item.category === "men's clothing" || item.category === "women's clothing");
   })
@@ -27,7 +24,7 @@ function Home() {
   const notify = (e) => {
     e.preventDefault()
     try{
-      console.log('send')
+      // console.log('send')
       toast.success(`Email has been addded`, {
         toastId: email
       });
@@ -45,13 +42,15 @@ function Home() {
 
 <section className='py-16' id='featured'>
   <div className='mx-auto'>
+  <span className="font-bold tracking-wide w-full flex justify-center items-center gap-2 my-12" style={{fontFamily : '"Montserrat",sans-serif'}}><div className=" w-12 h-[2px] bg-black"></div>FEATURED COLLECTIONS <div className=" w-12 h-[2px] bg-black"></div></span>
+
 <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 px-3 gap-7'>
 {filteredProduct.map(products => {
   return (<ProductCard product={products} key={products.id}/>)
 })}
 </div>
   </div>
-  <div className='my-6 flex justify-center items-center w-full'><Link className="py-3 px-5 mb-2  text-sm font-medium text-center text-white  border cursor-pointer bg-[black] border-gray-600">See More</Link></div>
+  <div className='my-6 flex justify-center items-center w-full'><Link to="/collection" className="py-3 px-5 mb-2  text-sm font-medium text-center text-white  border cursor-pointer bg-[black] border-gray-600">See More</Link></div>
 </section>
 
 <section className="bg-gray-900 my-12">
