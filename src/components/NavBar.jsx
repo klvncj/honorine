@@ -16,10 +16,9 @@ import { Link } from "react-router-dom";
 import { IoHomeOutline } from "react-icons/io5";
 import { BsCollection } from "react-icons/bs";
 import { IoPricetagsOutline } from "react-icons/io5";
-import { GrContact } from "react-icons/gr";
+// import { GrContact } from "react-icons/gr";
 import { TfiInfoAlt } from "react-icons/tfi";
 import { FaLink } from "react-icons/fa6";
-// import Sidebar from "./Sidebar";
 import { SidebarContext } from "../context/SidebarContext";
 import { CartContext } from "../context/CartContext";
 

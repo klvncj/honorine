@@ -1,8 +1,7 @@
-// import { Typography } from "@material-tailwind/react";
 import { BsWhatsapp } from "react-icons/bs";
-// import { FaLink } from "react-icons/fa6";
 import { GrInstagram } from "react-icons/gr";
 import { RiSnapchatFill } from "react-icons/ri";
+import { Link } from "react-router-dom";
 // import { Link } from "react-router-dom";
 
 
@@ -22,6 +21,9 @@ function Logo(){
 const currentYear = new Date().getFullYear();
  
 function Footer() {
+    const monoFontStyle = {
+        fontFamily: "Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace",
+      }; 
   return (
     <footer className="bg-white  dark:bg-gray-900">
     <div className="container p-6 mx-auto">
@@ -44,32 +46,32 @@ function Footer() {
             </div>
 
             <div className="mt-6 lg:mt-0 lg:flex-1">
-                <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+                <div className="grid grid-cols-2 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 font-serif uppercase" style={monoFontStyle}>
                     <div>
                         <h3 className="text-gray-700 uppercase dark:text-white">About</h3>
-                        <a href="#" className="block mt-2 text-sm text-black dark:text-gray-400 hover:underline">Company</a>
-                        <a href="#" className="block mt-2 text-sm text-black dark:text-gray-400 hover:underline">community</a>
-                        <a href="#" className="block mt-2 text-sm text-black dark:text-gray-400 hover:underline">Careers</a>
+                        <Link to="/about" className="block mt-2 text-md text-black dark:text-gray-400 hover:underline leading-tight">The Brand</Link>
+                        <Link to="/about" className="block mt-2 text-md text-black dark:text-gray-400 hover:underline">community</Link>
+                        <Link to="/about" className="block mt-2 text-md text-black dark:text-gray-400 hover:underline">Careers</Link>
                     </div>
 
                     <div>
-                        <h3 className="text-gray-700 uppercase dark:text-white">Blog</h3>
-                        <a href="#" className="block mt-2 text-sm text-black dark:text-gray-400 hover:underline">Tech</a>
-                        <a href="#" className="block mt-2 text-sm text-black dark:text-gray-400 hover:underline">Music</a>
-                        <a href="#" className="block mt-2 text-sm text-black dark:text-gray-400 hover:underline">Videos</a>
+                        <h3 className="text-gray-700 uppercase dark:text-white">Info</h3>
+                        <Link to="/t&c" className="block mt-2 text-md text-black dark:text-gray-400 hover:underline">Terms & Conditions</Link>
+                        <Link to="/t&C" className="block mt-2 text-md text-black dark:text-gray-400 hover:underline">Privacy Policy</Link>
+                        <Link to="/t&c" className="block mt-2 text-md text-black dark:text-gray-400 hover:underline">Shipping and returns</Link>
                     </div>
 
                     <div>
                         <h3 className="text-gray-700 uppercase dark:text-white">Products</h3>
-                        <a href="#" className="block mt-2 text-sm text-black dark:text-gray-400 hover:underline">Mega cloud</a>
-                        <a href="#" className="block mt-2 text-sm text-black dark:text-gray-400 hover:underline">Aperion UI</a>
-                        <a href="#" className="block mt-2 text-sm text-black dark:text-gray-400 hover:underline">Meraki UI</a>
+                        <Link to="/collection" className="block mt-2 text-md text-black dark:text-gray-400 hover:underline">Collection</Link>
+                        <Link to="/sales" className="block mt-2 text-md text-black dark:text-gray-400 hover:underline">Sale</Link>
+                        <Link to="/collection" className="block mt-2 text-md text-black dark:text-gray-400 hover:underline">New In</Link>
                     </div>
 
                     <div>
                         <h3 className="text-gray-700 uppercase dark:text-white">Contact</h3>
-                        <span className="block mt-2 text-sm text-black dark:text-gray-400 hover:underline">+1 526 654 8965</span>
-                        <span className="block mt-2 text-sm text-black dark:text-gray-400 hover:underline">example@email.com</span>
+                        <span className="block mt-2 text-md text-black dark:text-gray-400 hover:underline">(234) 903 817 4627</span>
+                        <span className="block mt-2 text-md text-black dark:text-gray-400 hover:underline">honorine@gmail.com</span>
                     </div>
                 </div>
             </div>

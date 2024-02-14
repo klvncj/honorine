@@ -1,8 +1,9 @@
 
 import Footer from "../components/Footer"
-import { useContext, useState } from 'react';
+import { useContext } from 'react';
 import NavBar from "../components/NavBar"
 import { ProductContext } from '../context/ProductContext'
+import ProductCard2 from '../components/ProductCard2'
 import ProductCard from '../components/ProductCard'
 import { ToastContainer,} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -48,7 +49,7 @@ function Collections() {
     </div>
     <main className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 px-3 gap-7 mt-12 mb-32 '>
     {filteredProduct.map(products => {
-  return (<ProductCard product={products} key={products.id}/>)
+  return (<ProductCard2 product={products} key={products.id}/>)
 })}
     </main>
    
