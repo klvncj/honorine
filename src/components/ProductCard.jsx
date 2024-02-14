@@ -1,6 +1,7 @@
 import { useContext } from "react"
 import { BsEyeFill, BsPlus } from "react-icons/bs";
 import { Link } from "react-router-dom";
+import '../App.css'
 
 import {CartContext} from '../context/CartContext'
 
@@ -8,6 +9,9 @@ function ProductCard({product}) {
  const {addToCart} = useContext(CartContext)
   //destructure
   const {id,image,category,title,price} = product
+  const monoFontStyle = {
+    fontFamily: "Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace",
+  };
   return (
    <div className="bg-[#fdfdfd] rounded p-2">
     <div className="border border-[#e4e4e4]  h-[300px] mb-4 relative overflow-hidden group transition">
@@ -31,9 +35,9 @@ function ProductCard({product}) {
     <div> 
       <div className="text-sm capitalize text-gray-500 mb-1">{category}</div>
       <Link to={`/product/${id}`}> 
-      <h2 className="font-semibold mb-1">{title}</h2>
+      <h2 className="mb-1 uppercase font-thin under" style={monoFontStyle}>{title.split(" ").splice(0,5).join(" ")}</h2>
       </Link>
-      <div className="font-semibold">₦ {price}</div>
+      <div className="font-thin">₦{price} NGN</div>
     </div>
    </div>
   )

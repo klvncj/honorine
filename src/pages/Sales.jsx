@@ -25,7 +25,7 @@ function Sales() {
      })}
     </main>:
     <main>
-        <div className='flex justify-center mt-12 text-red-500 font-serif'><span className='text-4xl font-black tracking-tight px-1'>Sales are currently unavailable</span></div> 
+        <div className='flex justify-center mt-12 text-red-500 font-serif'><span className='text-4xl font-black tracking-tight px-1 ' >Sales are currently unavailable</span></div> 
         <img className='w-full lg:h-[75dvh] ' src={sorry} alt='Sales unavailable'/>
     </main>
     }

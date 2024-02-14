@@ -6,6 +6,7 @@ import HeroBanner from '../components/HeroBanner';
 import { useContext } from 'react';
 import { ProductContext } from '../context/ProductContext'
 import ProductCard from '../components/ProductCard'
+import ProductCard2 from '../components/ProductCard2'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Footer from '../components/Footer';
@@ -44,9 +45,14 @@ function Home() {
   <div className='mx-auto'>
   <span className="font-bold tracking-wide w-full flex justify-center items-center gap-2 my-12" style={{fontFamily : '"Montserrat",sans-serif'}}><div className=" w-12 h-[2px] bg-black"></div>FEATURED COLLECTIONS <div className=" w-12 h-[2px] bg-black"></div></span>
 
-<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 px-3 gap-7'>
+<div className='lg:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 px-3 gap-7 hidden'>
 {filteredProduct.map(products => {
   return (<ProductCard product={products} key={products.id}/>)
+})}
+</div>
+<div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 px-3 gap-7 lg:hidden'>
+{filteredProduct.map(products => {
+  return (<ProductCard2 product={products} key={products.id}/>)
 })}
 </div>
   </div>

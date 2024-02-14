@@ -46,11 +46,11 @@ function Footer() {
             </div>
 
             <div className="mt-6 lg:mt-0 lg:flex-1">
-                <div className="grid grid-cols-2 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 font-serif uppercase" style={monoFontStyle}>
+                <div className="grid grid-cols-2 gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 font-serif uppercase" style={monoFontStyle}>
                     <div>
                         <h3 className="text-gray-700 uppercase dark:text-white">About</h3>
                         <Link to="/about" className="block mt-2 text-md text-black dark:text-gray-400 hover:underline leading-tight">The Brand</Link>
-                        <Link to="/about" className="block mt-2 text-md text-black dark:text-gray-400 hover:underline">community</Link>
+                        {/* <Link to="/about" className="block mt-2 text-md text-black dark:text-gray-400 hover:underline">community</Link> */}
                         <Link to="/about" className="block mt-2 text-md text-black dark:text-gray-400 hover:underline">Careers</Link>
                     </div>
 
@@ -64,14 +64,14 @@ function Footer() {
                     <div>
                         <h3 className="text-gray-700 uppercase dark:text-white">Products</h3>
                         <Link to="/collection" className="block mt-2 text-md text-black dark:text-gray-400 hover:underline">Collection</Link>
-                        <Link to="/sales" className="block mt-2 text-md text-black dark:text-gray-400 hover:underline">Sale</Link>
-                        <Link to="/collection" className="block mt-2 text-md text-black dark:text-gray-400 hover:underline">New In</Link>
+                        <Link to="/sales" className="block mt-2 text-md text-black dark:text-gray-400 hover:underline">Sales</Link>
+                        {/* <Link to="/collection" className="block mt-2 text-md text-black dark:text-gray-400 hover:underline">New In</Link> */}
                     </div>
 
                     <div>
                         <h3 className="text-gray-700 uppercase dark:text-white">Contact</h3>
-                        <span className="block mt-2 text-md text-black dark:text-gray-400 hover:underline">(234) 903 817 4627</span>
-                        <span className="block mt-2 text-md text-black dark:text-gray-400 hover:underline">honorine@gmail.com</span>
+                        <a href="tel:0903817462" className="block mt-2 text-md text-black dark:text-gray-400 hover:underline">(+234) 903 817 4627</a>
+                        <a href="mailto:info@wearhonrine.com" className="block mt-2 text-md text-black dark:text-gray-400 hover:underline">info@wearhonorine.com</a>
                     </div>
                 </div>
             </div>

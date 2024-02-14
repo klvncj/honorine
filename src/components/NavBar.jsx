@@ -30,7 +30,6 @@ function About(){
         <li className="expand"><Link to='/'>Home</Link></li>
         <li className="expand"><Link to='/collection'>Collections</Link></li>
         <li className="expand"><Link to='/sales'>Sales</Link></li>
-        {/* <li className="expand"><Link to='/contact'>Contact us</Link></li> */}
         <li className="expand"><Link to='/about'>About us</Link></li>
       </ul>
     </div>
@@ -46,7 +45,7 @@ function Logo(){
     color : 'black'
   }; 
   return(
-    <div style={textStyle} className="text-black">Wear Honorine</div>
+    <div style={textStyle} className="text-black cursor-pointer"><Link to="/">Wear Honorine</Link></div>
   )
 }
 
@@ -56,7 +55,9 @@ function DrawerMenu() {
  
   const openDrawer = () => setOpen(true);
   const closeDrawer = () => setOpen(false);
- 
+  const monoFontStyle = {
+    fontFamily: "Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace",
+  }; 
   return (
     <React.Fragment>
       <RiMenu2Fill onClick={openDrawer} size={25} className="cursor-pointer block lg:hidden" color="black"/>
@@ -84,11 +85,10 @@ function DrawerMenu() {
         </div>
         <div>
           <ul>
-            <li className="flex uppercase font-semibold font-sans p-3 pr-4 justify-between items-center my-2 border-b-[1px] border-black "><IoHomeOutline size={23}/><Link to='/'>Home</Link></li>
-            <li className="flex uppercase font-semibold font-sans p-3 py-5 pr-4 justify-between items-center  my-2  border-b-[1px] border-black"><BsCollection size={22}/><Link to='/collection'>Collection</Link></li>
-            <li className="flex justify-between items-center uppercase font-semibold font-sans p-3 py-4 pr-4  my-2 border-b-[1px] border-black"><IoPricetagsOutline size={20}/><Link to='/sales'>Sales</Link></li>
-            {/* <li className="flex uppercase font-semibold font-sans p-3 py-4 pr-4 justify-between items-center my-2 border-b-[1px] border-black"><GrContact size={20}/><Link to='/contact'>Contact us</Link></li> */}
-            <li className="flex uppercase font-semibold font-sans p-3 py-4 pr-4 justify-between items-center my-2 border-b-[1px]  border-black"><TfiInfoAlt size={20}/><Link to='/about'>About us</Link></li>
+            <li className="flex uppercase font-semibold font-sans p-3 pr-4 justify-between items-center my-2 border-b-[1px] border-black " style={monoFontStyle}><IoHomeOutline size={23}/><Link to='/'>Home</Link></li>
+            <li className="flex uppercase font-semibold font-sans p-3 py-5 pr-4 justify-between items-center  my-2  border-b-[1px] border-black" style={monoFontStyle}><BsCollection size={22}/><Link to='/collection'>Collection</Link></li>
+            <li className="flex justify-between items-center uppercase font-semibold font-sans p-3 py-4 pr-4  my-2 border-b-[1px] border-black" style={monoFontStyle}><IoPricetagsOutline size={20}/><Link to='/sales'>Sales</Link></li>
+            <li className="flex uppercase font-semibold font-sans p-3 py-4 pr-4 justify-between items-center my-2 border-b-[1px]  border-black" style={monoFontStyle}><TfiInfoAlt size={20}/><Link to='/about'>About us</Link></li>
           </ul>
 <hr className="my-12"/>
           <span className="flex flex-col">
@@ -114,7 +114,7 @@ function NavBar() {
   const {itemAmount} = useContext(CartContext)
   useEffect(()=>{
     window.addEventListener('scroll',()=>{
-      window.scrollY > 60 ? setIsActive(true) : setIsActive(false)
+      window.scrollY > 40 ? setIsActive(true) : setIsActive(false)
     })
   })
   return(
@@ -132,7 +132,7 @@ function NavBar() {
       <CiShoppingCart onClick={()=>{setIsOpen(!IsOpen)}} size={28} color="black" className="cursor-pointer" />
       </Badge>
       
-      <CiHeart size={28} className="cursor-pointer" color="black"/>
+      {/* <CiHeart size={28} className="cursor-pointer" color="black"/> */}
     
       <DrawerMenu/>
       
@@ -149,7 +149,7 @@ function NavBar() {
   <Badge content={itemAmount}>
   <CiShoppingCart onClick={()=>{setIsOpen(!IsOpen)}} size={28} color="black" className="cursor-pointer" />
   </Badge>
-      <CiHeart size={28} className="cursor-pointer" color="black"/>
+      {/* <CiHeart size={28} className="cursor-pointer" color="black"/> */}
       {/* <DrawerMenu/> */}
       </div>
     </nav>
