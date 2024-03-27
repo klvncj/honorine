@@ -10,7 +10,7 @@ function About() {
       <div className="flex-col lg:flex-row flex lg:justify-around lg:px-48">
         <div className="my-10 flex justify-center">
           <div>
-          <h1 className="font-bold text-3xl my-7" style={{fontFamily : '"Montserrat",sans-serif'}}>About Us</h1>
+          <h1 className="font-bold text-3xl my-7 text-center md:pl-3 md:text-left" style={{fontFamily : '"Montserrat",sans-serif'}}>About Us</h1>
           <p className="w-[400px] lg:w-[500px] text-left flex-wrap leading-relaxed p-3" style={{fontFamily : '"Montserrat",sans-serif'}}>
           At Wear Honorine, we are more than just a clothing brand – we are a symbol of style, elegance, and individuality. Established in 2018, our journey began with a vision to elevate style across borders and redefine fashion norms.<br/>
           We believe in the power of clothing to express one's identity and personality. Our collections are meticulously curated to embody sophistication, creativity, and a touch of uniqueness. Each piece is designed to inspire confidence and empower individuals to embrace their distinct style.<br/>
